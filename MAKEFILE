@@ -1,0 +1,27 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    MAKEFILE                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/19 22:49:09 by sprodatu          #+#    #+#              #
+#    Updated: 2024/03/19 22:49:09 by sprodatu         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = push_swap
+
+CC = cc
+
+FLAGS = -Wall -Wextra -Werror
+
+LIBFTDIR = libft/
+
+OBJDIR = objs/
+
+SRCDIR = srcs/
+
+SRC_1 = srcs/push_swap.c
+
+SRC_2 = srcs/push_swap/
