@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    MAKEFILE                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+         #
+#    By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 22:49:09 by sprodatu          #+#    #+#              #
-#    Updated: 2024/03/19 22:49:09 by sprodatu         ###   ########.fr        #
+#    Updated: 2024/03/23 22:52:34 by sprodatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,53 @@ OBJDIR = objs/
 
 SRCDIR = srcs/
 
-SRC_1 = srcs/push_swap.c
+SRC_1 = srcs/push_swap/push_swap.c
 
-SRC_2 = srcs/push_swap/
+SRC_2 = srcs/push_swap/algo.c \
+		srcs/push_swap/ft_add_back.c \
+		srcs/push_swap/ft_check_arguments.c \
+		srcs/push_swap/ft_check_dups.c \
+		srcs/push_swap/ft_check_sorted.c \
+		srcs/push_swap/ft_check_utils.c \
+		srcs/push_swap/ft_error_printing.c \
+		srcs/push_swap/ft_free.c \
+		srcs/push_swap/ft_list_args.c \
+		srcs/push_swap/ft_parse_args_quoted.c \
+		srcs/push_swap/ft_parse.c \
+		srcs/push_swap/ft_rotate_and_push.c \
+		srcs/push_swap/ft_rotate_type.c \
+		srcs/push_swap/ft_sort_big.c \
+		srcs/push_swap/ft_sort_three.c \
+		srcs/push_swap/ft_stack_new.c \
+		srcs/push_swap/lst_utils.c \
+		srcs/push_swap/lst_utils2.c \
+		srcs/push_swap/operations.c \
+		srcs/push_swap/solverutilsab.c \
+		srcs/push_swap/solverutilsba.c \
+
+INCLUDE = -L ./libft -lft
+
+OBJ_1 = $(SRC_1:.c=.o)
+
+OBJ_2 = $(SRC_2:.c=.o)
+
+.c.o:
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+
+$(NAME): $(OBJ_1) $(OBJ_2)
+	@make -C $(LIBFTDIR)
+	@$(CC) $(FLAGS) $(OBJ_1) $(OBJ_2) -o $(NAME) $(INCLUDE)
+
+all: $(NAME)
+
+clean:
+	${RM} ${OBJ_1} ${OBJ_2} ${NAME}
+	@cd $(LIBFTDIR) && make clean
+
+fclean: clean
+	${RM} ${NAME}
+	@cd $(LIBFTDIR) && make fclean
+
+re: fclean all
+
+.PHONY: all clean fclean re
