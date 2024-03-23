@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 00:53:46 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 00:53:46 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:49:46 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	ft_check_sorted(t_stack *stack)
+int	ft_checksorted(t_stack *stack)
 {
-	int value;
+	int	value;
 
 	value = stack->num;
 	while (stack)

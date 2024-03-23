@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 23:01:15 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/19 23:01:15 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/24 00:04:01 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int		ft_atoi2(const char *str)
+int	ft_atoi2(const char *str)
 {
 	int				sign;
 	long long int	res;
 
 	sign = 1;
 	res = 0;
+	if (*str == '-' || *str == '+')
+		ft_error();
 	while (*str == ' ' || *str == '\t' || *str == '\n'
 		|| *str == '\v' || *str == '\f' || *str == '\r')
 		str++;
@@ -59,7 +61,7 @@ t_stack	*ft_process2(char **argv)
 	}
 	ft_freestr(temp);
 	free(temp);
-	return(stack);
+	return (stack);
 }
 
 t_stack	*ft_process(int argc, char **argv)
@@ -68,7 +70,7 @@ t_stack	*ft_process(int argc, char **argv)
 	int		index;
 	int		j;
 
-		index = 1;
+	index = 1;
 	stack = NULL;
 	if (argc < 2)
 		ft_error();

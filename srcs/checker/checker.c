@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:16:31 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 21:16:31 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:39:48 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void	*ft_check(t_stack **stack_a, t_stack **stack_b, char *line)
 	return (get_next_line(0));
 }
 
-void ft_checker_sub(t_stack **stack_a, t_stack **stack_b, char *string)
+void	ft_checker_sub(t_stack **stack_a, t_stack **stack_b, char *string)
 {
-	char *temp;
+	char	*temp;
 
 	while (*string != '\n' && string)
 	{
@@ -66,11 +66,11 @@ void ft_checker_sub(t_stack **stack_a, t_stack **stack_b, char *string)
 	free(string);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	char *string;
+	char	*string;
 
 	stack_a = ft_process(argc, argv);
 	stack_b = NULL;

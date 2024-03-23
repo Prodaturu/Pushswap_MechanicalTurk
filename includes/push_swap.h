@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 22:55:36 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/19 22:55:36 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:40:04 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdbool.h>
 # include <string.h>
 # include <stddef.h>
-//	# include "../libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
@@ -92,6 +92,5 @@ void		algorithm(int argc, char **argv);
 void		ft_sort_b_till_3(t_stack **stack_a, t_stack **stack_b);
 t_stack		*ft_sub_process(char **argv);
 void		checker_error(void);
-
 
 #endif

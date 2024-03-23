@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 05:53:23 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 05:53:23 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 23:47:02 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_ra(t_stack **a, int j)
 	(*a)->next = tmp;
 	*a = tmp->next;
 	tmp->next = NULL;
+	sleep(1);
 	if (j == 0)
 		write(1, "ra\n", 3);
 }

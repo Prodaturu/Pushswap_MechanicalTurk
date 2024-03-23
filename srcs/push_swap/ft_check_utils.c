@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 00:57:30 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 00:57:30 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:41:32 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int digit(int character)
+int	digit(int character)
 {
 	if (character >= '0' && character <= '9')
 		return (1);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 03:28:36 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 03:28:36 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:48:02 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int ft_max(t_stack *stack)
 			max = stack->num;
 		stack = stack->next;
 	}
+	return (max);
 }
 
 int	ft_min(t_stack *stack)
@@ -58,4 +59,5 @@ int	ft_min(t_stack *stack)
 			min = stack->num;
 		stack = stack->next;
 	}
+	return (min);
 }
