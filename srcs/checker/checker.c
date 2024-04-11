@@ -6,11 +6,12 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:16:31 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/24 00:18:43 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/11 05:25:30 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+#include "../../get_next_line_final/get_next_line.h"
 
 void	ft_check_sub(t_stack **stack_a, t_stack **stack_b, char *line)
 {

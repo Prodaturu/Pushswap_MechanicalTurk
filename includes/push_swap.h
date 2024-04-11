@@ -6,7 +6,7 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 22:55:36 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/24 03:04:16 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/11 04:55:41 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int			ft_apply_rrarb(t_stack **a, t_stack **b, int c, char s);
 int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s);
 void		ft_rrb(t_stack **b, int j);
 void		ft_check_sub(t_stack **a, t_stack **b, char *line);
-char		*ft_check(t_stack **a, t_stack **b, char *line);
+void		*ft_check(t_stack **stack_a, t_stack **stack_b, char *line);
 void		ft_checker_sub(t_stack **a, t_stack **b, char *line);
 t_stack		*ft_process(int argc, char **argv);
 void		ft_sb(t_stack **b, int j);
