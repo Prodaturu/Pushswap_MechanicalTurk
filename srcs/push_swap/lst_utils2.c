@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lst_utils2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sprodatu < sprodatu@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 03:33:24 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/20 03:33:24 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/07 07:50:29 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	ft_find_place_b(t_stack *stack_b, int num_push)
 	}
 	return (i);
 }
-
 
 int	ft_find_place_a(t_stack *stack_a, int num_push)
 {

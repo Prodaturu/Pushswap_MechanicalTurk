@@ -6,7 +6,7 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 03:28:36 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/23 22:48:02 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/07 07:50:08 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_stack	*ft_lstlast(t_stack *stack)
 	return (stack);
 }
 
-int ft_max(t_stack *stack)
+int	ft_max(t_stack *stack)
 {
 	int	max;
 

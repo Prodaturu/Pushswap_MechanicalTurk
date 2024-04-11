@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 22:49:09 by sprodatu          #+#    #+#              #
-#    Updated: 2024/03/23 22:52:34 by sprodatu         ###   ########.fr        #
+#    Updated: 2024/04/11 02:02:50 by sprodatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,15 @@ FLAGS = -Wall -Wextra -Werror
 
 LIBFTDIR = libft/
 
+SRCDIR = srcs/
+
 OBJDIR = objs/
 
-SRCDIR = srcs/
+BONUS = checker
 
 SRC_1 = srcs/push_swap/push_swap.c
 
-SRC_2 = srcs/push_swap/algo.c \
+SRC_2 =	srcs/push_swap/algo.c \
 		srcs/push_swap/ft_add_back.c \
 		srcs/push_swap/ft_check_arguments.c \
 		srcs/push_swap/ft_check_dups.c \
@@ -43,14 +45,21 @@ SRC_2 = srcs/push_swap/algo.c \
 		srcs/push_swap/lst_utils.c \
 		srcs/push_swap/lst_utils2.c \
 		srcs/push_swap/operations.c \
+		srcs/push_swap/operations2.c \
+		srcs/push_swap/operations3.c \
 		srcs/push_swap/solverutilsab.c \
 		srcs/push_swap/solverutilsba.c \
+
+BONUS_SRCS =	srcs/checker/checker.c \
+				srcs/checker/checker_utils.c \
 
 INCLUDE = -L ./libft -lft
 
 OBJ_1 = $(SRC_1:.c=.o)
 
 OBJ_2 = $(SRC_2:.c=.o)
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
@@ -59,7 +68,14 @@ $(NAME): $(OBJ_1) $(OBJ_2)
 	@make -C $(LIBFTDIR)
 	@$(CC) $(FLAGS) $(OBJ_1) $(OBJ_2) -o $(NAME) $(INCLUDE)
 
+$(BONUS): $(BONUS_OBJS) $(OBJ_2)
+	@make -C $(LIBFTDIR)
+	@$(CC) $(FLAGS) $(BONUS_OBJS) $(OBJ_2) -o $(BONUS) $(INCLUDE)
+
 all: $(NAME)
+
+bonus:
+	$(CC) $(FLAGS) -o bonus bonus.c
 
 clean:
 	${RM} ${OBJ_1} ${OBJ_2} ${NAME}

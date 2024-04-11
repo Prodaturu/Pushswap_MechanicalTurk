@@ -6,7 +6,7 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 03:14:11 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/03/23 22:41:52 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/07 07:49:04 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,6 @@ void	ft_sort(t_stack **stack_a)
 		{
 			while ((*stack_a)->num != ft_min(*stack_a))
 				ft_rra(stack_a, 0);
-		}			
-	}	
+		}
+	}
 }
