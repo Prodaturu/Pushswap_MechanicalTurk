@@ -5,19 +5,27 @@
 #                                                     +:+ +:+         +:+      #
 #    By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/12 00:15:58 by sprodatu          #+#    #+#              #
-#    Updated: 2024/04/12 12:57:04 by sprodatu         ###   ########.fr        #
+#    Created: 2024/03/19 22:49:09 by sprodatu          #+#    #+#              #
+#    Updated: 2024/04/12 00:12:56 by sprodatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
 CC = cc
+
 CFLAGS = -Wall -Wextra -Werror
+
 LIBFTDIR = libft/
+
 SRCDIR = srcs/
+
 OBJDIR = objs/
+
 BONUS = checker
+
 SRC_1 = srcs/push_swap/push_swap.c
+
 SRC_2 =	srcs/push_swap/algo.c \
 		srcs/push_swap/ft_add_back.c \
 		srcs/push_swap/ft_check_arguments.c \
@@ -44,14 +52,14 @@ SRC_2 =	srcs/push_swap/algo.c \
 
 BONUS_SRCS =	srcs/checker/checker.c \
 				srcs/checker/checker_utils.c \
-				srcs/checker/get_next_line.c \
-				srcs/checker/get_next_line_utils.c \
 
-INCLUDE = -L ./libft -lft 
+INCLUDE =  -L ./libft -lft 
 
 OBJ_1 = $(SRC_1:.c=.o)
+
 OBJ_2 = $(SRC_2:.c=.o)
-BONUS_OBJS = $(SRC_2:.c=.o) $(BONUS_SRCS:.c=.o)
+
+BONUS_OBJS = $(SRCS: .c=.o) $(BONUS_SRCS:.c=.o)
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
@@ -60,11 +68,14 @@ $(NAME): $(OBJ_1) $(OBJ_2)
 	@make -C $(LIBFTDIR)
 	@$(CC) $(FLAGS) $(OBJ_1) $(OBJ_2) -o $(NAME) $(INCLUDE)
 
-bonus: $(BONUS_OBJS) $(OBJ_2)
+bonus: $(BONUS_OBJS) $(OBJ_2) $(OBJ_1)
 	@make -C $(LIBFTDIR)
-	@$(CC) $(FLAGS) $(BONUS_SRCS:.c=.o) $(OBJ_2) -o $(BONUS) $(INCLUDE)
+	@$(CC) $(FLAGS) $(BONUS_OBJS) $(OBJ_2) $(OBJ_1) -o $(BONUS) $(INCLUDE)
 
 all: $(NAME)
+
+bonus: all $(BONUS_OBJS)
+	$(CC) $(FLAGS) -o bonus $(BONUS_OBJS)
 
 clean:
 	${RM} ${OBJ_1} ${OBJ_2} ${NAME}
