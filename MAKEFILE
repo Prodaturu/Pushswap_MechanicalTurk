@@ -6,13 +6,13 @@
 #    By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/12 00:15:58 by sprodatu          #+#    #+#              #
-#    Updated: 2024/04/12 12:57:04 by sprodatu         ###   ########.fr        #
+#    Updated: 2024/04/13 15:13:32 by sprodatu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 LIBFTDIR = libft/
 SRCDIR = srcs/
 OBJDIR = objs/
@@ -67,11 +67,12 @@ bonus: $(BONUS_OBJS) $(OBJ_2)
 all: $(NAME)
 
 clean:
-	${RM} ${OBJ_1} ${OBJ_2} ${NAME}
+	${RM} ${OBJ_1} ${OBJ_2} ${BONUS_OBJS}
 	@cd $(LIBFTDIR) && make clean
 
 fclean: clean
 	${RM} ${NAME}
+	${RM} ${BONUS}
 	@cd $(LIBFTDIR) && make fclean
 
 re: fclean all

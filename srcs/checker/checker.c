@@ -6,7 +6,7 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:16:31 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/04/12 14:16:36 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/13 13:46:40 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	ft_check_sub(t_stack **stack_a, t_stack **stack_b, char *line)
 	else
 		return ;
 }
+
+// checking each line of input and executing the corresponding function
 
 void	*ft_check(t_stack **stack_a, t_stack **stack_b, char *line)
 {
@@ -75,7 +77,7 @@ int	main(int argc, char **argv)
 
 	stack_a = ft_process(argc, argv);
 	stack_b = NULL;
-	if (!stack_a || !ft_checkdup(stack_a))
+	if (!stack_a || ft_checkdup(stack_a))
 	{
 		ft_free(&stack_a);
 		checker_error();
