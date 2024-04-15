@@ -6,14 +6,14 @@
 /*   By: sprodatu <sprodatu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:16:31 by sprodatu          #+#    #+#             */
-/*   Updated: 2024/04/13 13:46:40 by sprodatu         ###   ########.fr       */
+/*   Updated: 2024/04/16 01:03:51 by sprodatu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 #include "get_next_line.h"
 
-void	ft_check_sub(t_stack **stack_a, t_stack **stack_b, char *line)
+void	ft_check_rrsub(t_stack **stack_a, t_stack **stack_b, char *line)
 {
 	if (line[2] == 'a')
 		ft_rra(stack_a, 1);
@@ -42,7 +42,7 @@ void	*ft_check(t_stack **stack_a, t_stack **stack_b, char *line)
 	else if (line[0] == 'r' && line[1] == 'b' && line[2] == '\n')
 		ft_rb(stack_b, 1);
 	else if (line[0] == 'r' && line[1] == 'r' && line[3] == '\n')
-		ft_check_sub(stack_a, stack_b, line);
+		ft_check_rrsub(stack_a, stack_b, line);
 	else if (line[0] == 'r' && line[1] == 'r' && line[2] == '\n')
 		ft_rr(stack_a, stack_b, 1);
 	else if (line[0] == 's' && line[1] == 's' && line[2] == '\n')
