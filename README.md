@@ -22,4 +22,4 @@ Contributions to enhance the functionality, efficiency, or documentation of Push
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
-The Pushswap algorithm and its variants are inspired by the work of researchers and developers in the field of computational algorithms and sorting techniques. Special thanks to the contributors and maintainers of the Pushswap_MechanicalTurk repository.
+The Pushswap algorithm and its variants are inspired by the work of other 42 programmers in the field of computational algorithms and sorting techniques. Special thanks to [Yigit Ogun](https://medium.com/@ayogun) whose medium article has inspired me to optimise the algorithm a little more.
